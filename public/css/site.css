@@ -44,12 +44,16 @@ body{
 	border-right: 1px #e6e6e6 solid;
 }
 
-h1{
+h1,h2{
 	margin-left:50px;
 	margin-bottom:0px;
 	font-family:Trebuchet;
 }
-
+#welcome ul{
+        margin-left:50px;
+	margin-bottom:0px;
+	font-family:Trebuchet;
+}
 p{
 	margin-left:100px;
 	margin-top:20px;

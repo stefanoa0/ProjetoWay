@@ -21,31 +21,25 @@
     <body>
         <div class="menu">
             <ul>
-                <li><a href="index.php"><strong>Projeto Way</strong></a></li>
+                <li><a href="home.php"><strong>Projeto Way</strong></a></li>
                 <span class="dividir"></span>		
                 <li style="float:right;">
                     <div id="loginContainer">
-                        <a href="#" id="loginButton"><span class="icon-enter"></span></a>
+                        <a href="#" id="loginButton"><span class="icon-user3"></span></a>
                         <div style="clear:both"></div>
                         <div id="loginBox">                
-                            <form id="loginForm" action="<?=$this->url(array('controller'=>'autenticacao','action'=>'login'),null,true)?>" method="POST">
-                                <fieldset id="body">
-                                    <fieldset>
-                                        <input placeholder="Usuário" name="LO_Login" type="text"/>
-                                    </fieldset>
-                                    <fieldset>
-                                        <input placeholder="Senha" name="LO_Senha" type="password"/>
-                                    </fieldset>
-                                    <input type="submit" id="login" value="Entrar" />
-                                    <label for="checkbox"><input type="checkbox" id="checkbox" />Remember me</label>
+                            <form id="loginForm" action="home.php">
+                                <fieldset id="body">										
+                                    <a style="float:left;"  id="loginButton"><span class="icon-exit"></span></a>
+                                    <a style="float:left;"<a href="<?=$this->url(array("controller"=>"admin","action"=>"logout"),null,true)?>" id="loginButton"><span class="icon-cog"></span></a>
+                                    <!-- FECHAR SESSÃO AO SAIR -->
                                 </fieldset>
-                                <span><a href="#">Forgot your password?</a></span>
                             </form>
                         </div>
                     </div>
                 </li>					
-                <li style="float:right;"><a href="<?=$this->url(array("controller"=>"index","action"=>"novo"),null,true)?>"><span class="icon-plus"></span></a></li>			
-                <li style="float:right;"><a href="<?=$this->url(array("controller"=>"index","action"=>"index"),null,true)?>"><span class="icon-home"></span></a></li>
+                <li style="float:right;"><a href="novo_projeto.php"><span class="icon-file3"></span></a></li>			
+                <li style="float:right;"><a href="<?=$this->url(array("controller"=>"admin","action"=>"index"),null,true)?>"><span class="icon-home"></span></a></li>
                 </li>
             </ul>
         </div>
@@ -53,4 +47,4 @@
             <?php echo $this->layout()->content; ?>
         </div>
     </body>
-</html>
+</html>	
