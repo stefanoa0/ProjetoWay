@@ -1,1 +1,56 @@
-<?php echo $this->layout()->content; ?>
+<?= $this->doctype('XHTML1_TRANSITIONAL') ?>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-br">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+            <base href="http://<?= $_SERVER['HTTP_HOST'] . $this->baseUrl() ?>/" />        
+            <?php
+            $this->headLink()->prependStylesheet('../public/css/icons.css');
+            $this->headLink()->appendStylesheet('../public/css/login.css');
+            $this->headLink()->appendStylesheet('../public/css/site.css');
+            $this->headScript()->prependFile('../public/js/lib.js');
+            $this->headScript()->appendFile('../public/js/login.js');
+
+            echo $this->headLink() . "\n";
+            echo $this->headScript() . "\n";
+            ?> 
+
+            <title>
+                Projeto de Monitoramento da Atividade Pesqueira
+            </title>
+    </head>
+    <body>
+        <div class="menu">
+            <ul>
+                <li><a href="index.php"><strong>Projeto Way</strong></a></li>
+                <span class="dividir"></span>		
+                <li style="float:right;">
+                    <div id="loginContainer">
+                        <a href="#" id="loginButton"><span class="icon-enter"></span></a>
+                        <div style="clear:both"></div>
+                        <div id="loginBox">                
+                            <form id="loginForm" action="<?=$this->url(array('controller'=>'autenticacao','action'=>'login'),null,true)?>" method="POST">
+                                <fieldset id="body">
+                                    <fieldset>
+                                        <input placeholder="Usuário" name="LO_Login" type="text"/>
+                                    </fieldset>
+                                    <fieldset>
+                                        <input placeholder="Senha" name="LO_Senha" type="password"/>
+                                    </fieldset>
+                                    <input type="submit" id="login" value="Entrar" />
+                                    <label for="checkbox"><input type="checkbox" id="checkbox" />Remember me</label>
+                                </fieldset>
+                                <span><a href="#">Forgot your password?</a></span>
+                            </form>
+                        </div>
+                    </div>
+                </li>					
+                <li style="float:right;"><a href="<?=$this->url(array("controller"=>"index","action"=>"novo"),null,true)?>"><span class="icon-plus"></span></a></li>			
+                <li style="float:right;"><a href="<?=$this->url(array("controller"=>"index","action"=>"index"),null,true)?>"><span class="icon-home"></span></a></li>
+                </li>
+            </ul>
+        </div>
+        <div id="conteudo">
+            <?php echo $this->layout()->content; ?>
+        </div>
+    </body>
+</html>

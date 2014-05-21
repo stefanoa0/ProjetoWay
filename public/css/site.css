@@ -1,0 +1,129 @@
+body{
+	margin:0px;
+	padding:0px;
+}
+
+.menu{
+	background-color:green;
+	height:40px;
+}
+
+.menu >ul{
+	margin:0px;
+	padding:0px;
+	list-style:none;
+}
+
+.menu > ul > li{
+	display:inline;
+	margin:0px;
+	margin-top:3px;
+	margin-left:20px;
+	padding:5px;
+	float:left;
+}
+
+.menu > ul > li > a{
+	text-decoration:none;
+	color:white;
+	font-size:20px;
+}
+
+.dividir{
+	position: relative;
+	margin: 10px;
+	line-height: 20px;
+	height: 20px;
+	float: left;
+	display: inline-block;
+	padding: 0;
+	font-weight: normal;
+	font-size: 10pt;
+	color: #fff;
+	width: 1px;
+	border-right: 1px #e6e6e6 solid;
+}
+
+h1{
+	margin-left:50px;
+	margin-bottom:0px;
+	font-family:Trebuchet;
+}
+
+p{
+	margin-left:100px;
+	margin-top:20px;
+	margin-right:50px;
+	text-align:justify;
+}
+.menu-dropdown{
+	display:none;
+	background-color:green;
+	width:160px;
+	height:95px;
+	margin-left:-50px;
+	margin-top:10px;
+}
+.menu-dropdown > form{
+	padding:10px;
+}
+
+.menu-dropdown > form > input{
+	margin-top:3px;
+	width:100%;
+}
+
+.menu-dropdown > ul{
+	margin:0px;
+	padding:0px;
+	list-style:none;
+}
+
+.menu-dropdown > ul > li{
+    margin:0px;
+	padding:5px;
+}
+
+.menu-dropdown > ul > li > a{
+	text-decoration:none;
+	color:white;
+}
+
+.center-page{
+	margin-top:50px;
+	margin-right:200px;
+	margin-left:200px;
+}
+
+.center-page > form > input,select{
+	width:100%;
+	height:30px;
+	margin-top:10px;
+}
+
+.span{
+	width:30% !important;
+	float:left !important;
+	margin-left:13% !important;
+}
+
+input[type="submit"]{
+	background:green;
+	color:white;
+	border:1px solid green;	
+}
+
+label{
+	margin-top:10px !important;
+}
+
+@media screen and (min-width: 240px) and (max-width: 900px) { 
+	.center-page { 
+		margin:0px;
+		padding:10px;
+	} 
+	.menu > ul > li{
+		margin-left:5px;
+	}
+}
+

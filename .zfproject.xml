@@ -11,6 +11,36 @@
           <actionMethod actionName="index"/>
         </controllerFile>
         <controllerFile controllerName="Error"/>
+        <controllerFile controllerName="Autenticacao">
+          <actionMethod actionName="index"/>
+        </controllerFile>
+        <controllerFile controllerName="Cargo">
+          <actionMethod actionName="index"/>
+        </controllerFile>
+        <controllerFile controllerName="Categoria">
+          <actionMethod actionName="index"/>
+        </controllerFile>
+        <controllerFile controllerName="Equipe">
+          <actionMethod actionName="index"/>
+        </controllerFile>
+        <controllerFile controllerName="Etapa">
+          <actionMethod actionName="index"/>
+        </controllerFile>
+        <controllerFile controllerName="Prazo">
+          <actionMethod actionName="index"/>
+        </controllerFile>
+        <controllerFile controllerName="Projeto">
+          <actionMethod actionName="index"/>
+        </controllerFile>
+        <controllerFile controllerName="Recurso">
+          <actionMethod actionName="index"/>
+        </controllerFile>
+        <controllerFile controllerName="Requisito">
+          <actionMethod actionName="index"/>
+        </controllerFile>
+        <controllerFile controllerName="Usuario">
+          <actionMethod actionName="index"/>
+        </controllerFile>
       </controllersDirectory>
       <formsDirectory enabled="false"/>
       <layoutsDirectory>
@@ -18,7 +48,31 @@
           <layoutScriptFile layoutName="layout"/>
         </layoutScriptsDirectory>
       </layoutsDirectory>
-      <modelsDirectory/>
+      <modelsDirectory>
+        <modelFile modelName="Cargo"/>
+        <modelFile modelName="Categoria"/>
+        <modelFile modelName="Equipe"/>
+        <modelFile modelName="Etapa"/>
+        <modelFile modelName="Prazo"/>
+        <modelFile modelName="Projeto"/>
+        <modelFile modelName="Recurso"/>
+        <modelFile modelName="Requisito"/>
+        <modelFile modelName="Usuario"/>
+        <dbTableDirectory>
+          <dbTableFile dbTableName="Cargo"/>
+          <dbTableFile dbTableName="Categoria"/>
+          <dbTableFile dbTableName="Custo"/>
+          <dbTableFile dbTableName="Equipe"/>
+          <dbTableFile dbTableName="Etapa"/>
+          <dbTableFile dbTableName="Prazo"/>
+          <dbTableFile dbTableName="Projeto"/>
+          <dbTableFile dbTableName="Recurso"/>
+          <dbTableFile dbTableName="Requisito"/>
+          <dbTableFile dbTableName="Usuario"/>
+          <dbTableFile dbTableName="EquipeTrabalhaProjeto"/>
+          <dbTableFile dbTableName="UsuarioTrabalhaEquipe"/>
+        </dbTableDirectory>
+      </modelsDirectory>
       <modulesDirectory enabled="false"/>
       <servicesDirectory enabled="false"/>
       <viewsDirectory>
@@ -28,6 +82,36 @@
           </viewControllerScriptsDirectory>
           <viewControllerScriptsDirectory forControllerName="Error">
             <viewScriptFile forActionName="error"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Autenticacao">
+            <viewScriptFile forActionName="index"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Cargo">
+            <viewScriptFile forActionName="index"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Categoria">
+            <viewScriptFile forActionName="index"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Equipe">
+            <viewScriptFile forActionName="index"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Etapa">
+            <viewScriptFile forActionName="index"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Prazo">
+            <viewScriptFile forActionName="index"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Projeto">
+            <viewScriptFile forActionName="index"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Recurso">
+            <viewScriptFile forActionName="index"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Requisito">
+            <viewScriptFile forActionName="index"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Usuario">
+            <viewScriptFile forActionName="index"/>
           </viewControllerScriptsDirectory>
         </viewScriptsDirectory>
         <viewHelpersDirectory/>
