@@ -30,7 +30,7 @@ a { text-decoration:none }
     color:#ffffff; 
     font-size:20px; 
     display:block;
-	margin-right:20px;
+    margin-right:20px;
 }
 
 /* Login Box */
@@ -57,7 +57,7 @@ a { text-decoration:none }
     border-radius:3px 0 3px 3px;
     -moz-border-radius:3px 0 3px 3px;
     margin-top:-1px;
-    background:#1E0B73;
+    background:#2CB7F2;
     padding:6px;
 }
 
@@ -69,7 +69,7 @@ a { text-decoration:none }
 }
 
 fieldset#body {
-    background:#1E0B73;
+    background:#2CB7F2;
     border-radius:3px;
     -moz-border-radius:3px;
     padding:10px 13px;
