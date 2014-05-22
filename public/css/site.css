@@ -4,7 +4,7 @@ body{
 }
 
 .menu{
-	background-color:green;
+	background-color:#2CB7F2;
 	height:40px;
 }
 
@@ -62,7 +62,7 @@ p{
 }
 .menu-dropdown{
 	display:none;
-	background-color:green;
+	background-color:#1E0B73;
 	width:160px;
 	height:95px;
 	margin-left:-50px;
@@ -121,6 +121,19 @@ label{
 	margin-top:10px !important;
 }
 
+.bem-vindo{
+    text-align: center;
+    margin-right: 20px;
+}
+
+.caixa{
+    background: #76CEF4;
+    width: 100px;
+    height: 40px;
+    float:left;
+    -webkit-border-radius: 0px 30px 0px 30px;
+}
+
 @media screen and (min-width: 240px) and (max-width: 900px) { 
 	.center-page { 
 		margin:0px;
@@ -131,3 +144,6 @@ label{
 	}
 }
 
+.top{
+    margin-top:10px !important;
+}

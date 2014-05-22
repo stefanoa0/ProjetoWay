@@ -57,7 +57,7 @@ a { text-decoration:none }
     border-radius:3px 0 3px 3px;
     -moz-border-radius:3px 0 3px 3px;
     margin-top:-1px;
-    background:green;
+    background:#1E0B73;
     padding:6px;
 }
 
@@ -69,7 +69,7 @@ a { text-decoration:none }
 }
 
 fieldset#body {
-    background:green;
+    background:#1E0B73;
     border-radius:3px;
     -moz-border-radius:3px;
     padding:10px 13px;
@@ -137,8 +137,7 @@ fieldset#body {
 }
 
 #loginForm span a {
-    color:#3a454d;
-    text-shadow:1px 1px #fff;
+    color:#ffffff;
     font-size:12px;
 }
 
