@@ -78,8 +78,10 @@
           <dbTableFile dbTableName="EquipeTrabalhaProjeto"/>
           <dbTableFile dbTableName="UsuarioTrabalhaEquipe"/>
           <dbTableFile dbTableName="AlteracaoSenha"/>
+          <dbTableFile dbTableName="Login"/>
         </dbTableDirectory>
         <modelFile modelName="AlteracaoSenha"/>
+        <modelFile modelName="Login"/>
       </modelsDirectory>
       <modulesDirectory enabled="false"/>
       <servicesDirectory enabled="false"/>

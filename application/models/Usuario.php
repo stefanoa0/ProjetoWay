@@ -28,12 +28,28 @@ class Application_Model_Usuario
     public function insert(array $request) // Função insert
     {
         $this->dbtableUsuario = new Application_Model_DbTable_Usuario();
+        $this->dbtableLogin = new Application_Model_DbTable_Login();
+       
+        
+        $senhaCriptografada = sh1($request['LO_Senha']);
+        
+        $dadosLogin = array(
+            'LO_Login' => $request['LO_Login'],
+            'LO_Senha' => $senhaCriptografada//Esperar formulários de Raul/Maurício/Cláudio
+        );
+        $id_login = $this->dbtableLogin->insert($dadosLogin);
         
         $dadosUsuario = array(
-            'NomeTupla' => $request['Nome do campo de formulário'] //Esperar formulários de Raul/Maurício/Cláudio
+            'US_Nome' => $request['US_Nome'],
+            'US_CPF' => $request['US_CPF'],
+            'US_Email' => $request['US_Email'],
+            'Cargo_CA_ID' => $request['cargos'],
+            'Login_LO_ID' => $id_login
+            //Esperar formulários de Raul/Maurício/Cláudio
         );
+        $this->dbtableUsuario->insert($dadosUsuario);
         
-        $this->dbtableUsuario->insert($dadosUsuario); //Insere o cargo
+         //Insere o cargo
 
         return;
     }

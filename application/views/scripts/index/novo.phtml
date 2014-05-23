@@ -1,7 +1,7 @@
 <h1>Cadastre-se</h1>
 <hr/>
 <div class="center-page">	
-    <form name="CadastraUsuario" action="<?=$this->url(array("controller"=>"usuario","action"=>"criar"),null,true)?>" method="post">
+    <form name="CadastraUsuario" action="<?=$this->url(array("controller"=>"index","action"=>"criar"),null,true)?>" method="post">
         <input placeholder="Nome" name="US_Nome" type="text"/>
         <br/>
         <input placeholder="CPF" name="US_CPF" type="text"/>
@@ -12,6 +12,15 @@
         <br/>
         <input placeholder="Senha" name="LO_Senha" type="password"/>
         <br/>
+        <select name="cargos">
+            <?php foreach($this->cargos as $key => $cargo):
+            ?>
+            <option value="<?=$cargo['CA_ID']?>"><?=$cargo['CA_Cargo']?></option>
+            
+            <?php
+            endforeach;
+            ?>
+        </select>
         
         <input type="submit" value="Cadastrar"/>
     </form>
