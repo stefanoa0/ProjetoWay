@@ -12,6 +12,22 @@ class EquipeController extends Zend_Controller_Action
     {
         // action body
     }
+    
+    public function novoAction(){
+        
+    }
+    
+    public function updateAction(){
+        
+    }
+    
+    public function editarAction(){
+        
+    }
+    
+    public function deleteAction(){
+        
+    }
 
 
 }
