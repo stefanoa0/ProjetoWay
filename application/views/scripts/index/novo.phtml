@@ -1,24 +1,18 @@
 <h1>Cadastre-se</h1>
 <hr/>
 <div class="center-page">	
-    <form name="CadastraUsuario" method="POST" action="CadastrarUsuario.php">
+    <form name="CadastraUsuario" action="<?=$this->url(array("controller"=>"usuario","action"=>"criar"),null,true)?>" method="post">
         <input placeholder="Nome" name="US_Nome" type="text"/>
         <br/>
         <input placeholder="CPF" name="US_CPF" type="text"/>
         <br/>
+        <input placeholder="Email" name="US_Email" type="text"/>
+        
         <input placeholder="Login" name="LO_Login" type="text"/>
         <br/>
         <input placeholder="Senha" name="LO_Senha" type="password"/>
         <br/>
-        <input placeholder="Cargo" name="Cargo" type="text"/>
-        <br/>
-        <label>Cargo.:</label>
-        <select>
-            <option value="A">A</option>
-            <option value="B">B</option>
-            <option value="C">C</option>
-        </select>
-        <br/>
+        
         <input type="submit" value="Cadastrar"/>
     </form>
 </div>
