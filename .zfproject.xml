@@ -44,6 +44,9 @@
         <controllerFile controllerName="Admin">
           <actionMethod actionName="index"/>
         </controllerFile>
+        <controllerFile controllerName="EsqueciSenha">
+          <actionMethod actionName="index"/>
+        </controllerFile>
       </controllersDirectory>
       <formsDirectory enabled="false"/>
       <layoutsDirectory>
@@ -74,7 +77,9 @@
           <dbTableFile dbTableName="Usuario"/>
           <dbTableFile dbTableName="EquipeTrabalhaProjeto"/>
           <dbTableFile dbTableName="UsuarioTrabalhaEquipe"/>
+          <dbTableFile dbTableName="AlteracaoSenha"/>
         </dbTableDirectory>
+        <modelFile modelName="AlteracaoSenha"/>
       </modelsDirectory>
       <modulesDirectory enabled="false"/>
       <servicesDirectory enabled="false"/>
@@ -117,6 +122,9 @@
             <viewScriptFile forActionName="index"/>
           </viewControllerScriptsDirectory>
           <viewControllerScriptsDirectory forControllerName="Admin">
+            <viewScriptFile forActionName="index"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="EsqueciSenha">
             <viewScriptFile forActionName="index"/>
           </viewControllerScriptsDirectory>
         </viewScriptsDirectory>
