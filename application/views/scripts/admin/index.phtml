@@ -1,4 +1,19 @@
 <br /><br />
-<div id="view-content">
-	<input name="Usuario logado" value=""/>
+<!-- Pagina depois de fazer login -->
+<div id="view-content">    
+    <div id="projetos">
+        <?php
+        foreach ($this->projetos as $key => $projeto):        
+        ?>
+        <fieldset>
+        <a href="<?= $this->url(array("controller" => "projeto", "action" => "index", "id" => $projeto["PRJ_ID"]), null, true) ?>"><label><?= $projeto['PRJ_Nome'] ?></label></a><br/>
+        <a class="icon-users2" ></a>
+        <a class="icon-paste2" ></a>
+        <a class="icon-notebook"></a>
+        </fieldset>
+        <?php
+        endforeach;
+        ?>
+    </div>
+
 </div>
