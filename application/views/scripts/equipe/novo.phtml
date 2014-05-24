@@ -1,1 +1,31 @@
+<form name="cadastrarEquipe" method="POST" action="<?=$this->url(array("controller"=>"equipe","action"=>"criar"),null,true)?>">
+            <input name="PRJ_ID" type="hidden" value="<?=$cargo['CA_ID']?>">
+            <input placeholder="Nome" name="EQ_nome" type="text"/>
+            <br/>
+            <input placeholder="custo" name="EQ_CustoEquipe" type="number" step="any"/>
+            <br/>
+            <label>Usuario:</label>
+            <select name ="Usuario1">
+                <?php foreach($this->usuarios as $key => $usuario):
+                ?>
+                <option value="<?=$usuario['US_ID']?>"><?=$usuario['US_Nome']?></option>
+            
+                <?php
+                endforeach;
+                ?>
 
+            </select>
+            <br/>
+            <label>Projeto:</label>
+            <select name ="Usuario1">
+                <?php foreach($this->usuarios as $key => $usuario):
+                ?>
+                <option value="<?=$usuario['US_ID']?>"><?=$usuario['US_Nome']?></option>
+            
+                <?php
+                endforeach;
+                ?>
+            </select>
+            <br/>
+            <input type="submit" value="Cadastrar" />
+</form>

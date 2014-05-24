@@ -1,1 +1,17 @@
-
+<form name="CadastraRecurso" method="POST" action="CadastraRecurso.php">
+            <input placeholder="Nome" name="REC_Nome" type="text"/>
+            <br/>
+            <input placeholder="Quantidade" name="REC_quantidade" type="number"/>
+            <br/>            
+            <!-- step="any" para float-->
+            <input placeholder="Valor" name="REC_valor" type="number" step="any"/>
+            <br/> 
+            <label>Categoria:</label>
+            <select>
+                <option value="A">A</option>
+                <option value="B">B</option>
+                <option value="C">C</option>
+            </select>
+            <br/>  
+            <input type="submit" value="Cadastrar"/>
+</form>

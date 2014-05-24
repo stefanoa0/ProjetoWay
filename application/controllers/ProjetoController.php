@@ -5,6 +5,7 @@ class ProjetoController extends Zend_Controller_Action
 
     public function init()
     {
+        $this->modelPrazo = new Application_Model_Prazo();
         $this->modelProjeto = new Application_Model_Projeto();
 
         if (Zend_Auth::getInstance()->hasIdentity()) {
@@ -25,6 +26,11 @@ class ProjetoController extends Zend_Controller_Action
         
     }
     
+    public function criarAction(){
+        $this->modelProjeto->insert($this->_getAllParams());
+        
+        $this->redirect('admin/index');
+    }
     public function updateAction(){
         
     }

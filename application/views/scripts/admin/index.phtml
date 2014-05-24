@@ -6,10 +6,9 @@
         foreach ($this->projetos as $key => $projeto):        
         ?>
         <fieldset>
-        <a href="<?= $this->url(array("controller" => "projeto", "action" => "index", "id" => $projeto["PRJ_ID"]), null, true) ?>"><label><?= $projeto['PRJ_Nome'] ?></label></a><br/>
-        <a class="icon-users2" ></a>
-        <a class="icon-paste2" ></a>
-        <a class="icon-notebook"></a>
+            <a href="<?= $this->url(array("controller" => "projeto", "action" => "index", "id" => $projeto["PRJ_ID"]), null, true) ?>"><label><?= $projeto['PRJ_Nome'] ?></label></a><br/>
+            <a class="icon-paste2" href="<?= $this->url(array("controller" => "requisito", "action" => "novo", "id" => $projeto["PRJ_ID"]), null, true) ?>"></a>
+            <a class="icon-notebook"href="<?= $this->url(array("controller" => "recurso", "action" => "novo", "id" => $projeto["PRJ_ID"]), null, true) ?>"></a>
         </fieldset>
         <?php
         endforeach;

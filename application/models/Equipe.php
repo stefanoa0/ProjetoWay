@@ -14,7 +14,7 @@ class Application_Model_Equipe
             $select->where($where);
         } //padrão
 
-        return $this->dbtableCargo->fetchAll($select)->toArray(); //padrão
+        return $this->dbtableEquipe->fetchAll($select)->toArray(); //padrão
     }
     
     public function find($id) //Função Find para buscar na tabela 
@@ -27,12 +27,20 @@ class Application_Model_Equipe
     public function insert(array $request) // Função insert
     {
         $this->dbtableEquipe = new Application_Model_DbTable_Equipe();
+        $equipeTrabalhaProjeto = new Application_Model_DbTable_EquipeTrabalhaProjeto();
         
         $dadosEquipe = array(
-            'NomeTupla' => $request['Nome do campo de formulário'] //Esperar formulários de Raul/Maurício/Cláudio
+            'EQ_Nome' => $request['EQ_Nome'],
+            'EQ_CustoEquipe' => $request['EQ_CustoEquipe']//Esperar formulários de Raul/Maurício/Cláudio
+        );
+        $idEquipe = $this->dbtableEquipe->insert($dadosEquipe);
+        
+        $dadosEquipeTrabalhaProjeto = array(
+                'Equipe_EQ_ID' => $idEquipe,
+                'Projeto_PRJ_ID' => $request['id']
         );
         
-        $this->dbtableEquipe->insert($dadosEquipe); //Insere o cargo
+        $equipeTrabalhaProjeto->insert($dadosEquipeTrabalhaProjeto);
 
         return;
     }

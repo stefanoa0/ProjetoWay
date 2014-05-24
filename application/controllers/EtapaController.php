@@ -5,14 +5,21 @@ class EtapaController extends Zend_Controller_Action
 
     public function init()
     {
-        /* Initialize action controller here */
+
+        if (Zend_Auth::getInstance()->hasIdentity()) {
+            $this->_helper->layout->setLayout('admin');
+        } else {
+            $this->_redirect('index');
+        }
     }
 
     public function indexAction()
     {
         // action body
     }
-
+    public function novoAction(){
+        
+    }
 
 }
 

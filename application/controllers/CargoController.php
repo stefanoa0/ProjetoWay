@@ -5,14 +5,22 @@ class CargoController extends Zend_Controller_Action
 
     public function init()
     {
-        /* Initialize action controller here */
+        $this->modelProjeto = new Application_Model_Projeto();
+
+        if (Zend_Auth::getInstance()->hasIdentity()) {
+            $this->_helper->layout->setLayout('admin');
+        } else {
+            $this->_redirect('index');
+        }
     }
 
     public function indexAction()
     {
         // action body
     }
-
+    public function novoAction(){
+        
+    }
 
 }
 

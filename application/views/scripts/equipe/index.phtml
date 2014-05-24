@@ -1,4 +1,18 @@
 <br /><br />
-<div id="view-content">
-	<p>View script for controller <b>Equipe</b> and script/action name <b>index</b></p>
+<!-- Pagina depois de fazer login -->
+<div id="view-content">    
+    <div id="equipes">
+        <?php
+        foreach ($this->equipes as $key => $equipe):        
+        ?>
+        <fieldset>
+            <a href="<?= $this->url(array("controller" => "projeto", "action" => "index", "id" => $equipe["EQ_ID"]), null, true) ?>"><label><?= $equipe['EQ_Nome'] ?></label></a><br/>
+            <a class="icon-user2" href="<?= $this->url(array("controller" => "usuario", "action" => "usuario-equipe", "id" => $equipe["EQ_ID"]), null, true) ?>"></a>
+            <a class="icon-file3" href="<?= $this->url(array("controller" => "projeto", "action" => "equipe-projeto", "id" => $projeto["PRJ_ID"]), null, true) ?>"></a>
+        </fieldset>
+        <?php
+        endforeach;
+        ?>
+    </div>
+    <a href="<?= $this->url(array("controller" => "equipe", "action" => "novo"), null, true) ?>"><label>NovaEquipe</label></a><br/>
 </div>

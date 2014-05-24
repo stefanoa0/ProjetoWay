@@ -29,7 +29,9 @@ class Application_Model_Etapa
         $this->dbtableEtapa = new Application_Model_DbTable_Etapa();
         
         $dadosEtapa = array(
-            'NomeTupla' => $request['Nome do campo de formulário'] //Esperar formulários de Raul/Maurício/Cláudio
+            'ET_Nome' => $request[''],
+            'ET_Descricao' => $request[''],
+            'Projeto_PRJ_ID' => $request['']//Esperar formulários de Raul/Maurício/Cláudio
         );
         
         $this->dbtableEtapa->insert($dadosEtapa); //Insere o cargo

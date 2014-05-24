@@ -38,9 +38,10 @@
                         </div>
                     </div>
                 </li>					
-                <li style="float:right;"><a href="novo_projeto.php"><span class="icon-file3"></span></a></li>			
+                <li style="float:right;"><a href="<?=$this->url(array("controller"=>"projeto","action"=>"novo"),null,true)?>"><span class="icon-file3"></span></a></li>			
                 <li style="float:right;"><a href="<?=$this->url(array("controller"=>"admin","action"=>"index"),null,true)?>"><span class="icon-home"></span></a></li>
-                </li>
+                <li style="float:right;"><a class="icon-users2" href="<?= $this->url(array("controller" => "equipe", "action" => "index"), null, true) ?>"></a></li>
+            </li>
             </ul>
         </div>
         <div id="conteudo">

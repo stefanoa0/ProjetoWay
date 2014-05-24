@@ -27,11 +27,29 @@ class Application_Model_Projeto
     public function insert(array $request) // Função insert
     {
         $this->dbtableProjeto = new Application_Model_DbTable_Projeto();
+        $dbtablePrazo = new Application_Model_DbTable_Prazo();
+        $dbtableCusto = new Application_Model_DbTable_Custo();
         
-        $dadosProjeto = array(
-            'NomeTupla' => $request['Nome do campo de formulário'] //Esperar formulários de Raul/Maurício/Cláudio
+        $dadosCusto = array(
+          'CT_Inicial' => $request['CT_Inicial']
         );
         
+        $idCusto = $dbtableCusto->insert($dadosCusto);
+        
+        $dadosPrazo = array(
+            'PRZ_DataInicial' => $request['PRZ_Datainicial'],
+            'PRZ_DataFinal' => $request['PRZ_Datafinal']//Esperar formulários de Raul/Maurício/Cláudio
+        );
+        
+        $idPrazo = $dbtablePrazo->insert($dadosPrazo);
+        
+        $dadosProjeto = array(
+            'PRJ_Nome' => $request['PRJ_Nome'],
+            'PRJ_Descricao' => $request['PRJ_Descricao'],//Esperar formulários de Raul/Maurício/Cláudio
+            'Prazo_PRZ_ID' => $idPrazo,
+            'Custo_CT_ID' => $idCusto
+            
+        );
         $this->dbtableProjeto->insert($dadosProjeto); //Insere o cargo
 
         return;

@@ -29,7 +29,9 @@ class Application_Model_Categoria
         $this->dbtableCategoria = new Application_Model_DbTable_Categoria();
         
         $dadosCategoria = array(
-            'NomeTupla' => $request['Nome do campo de formulário'] //Esperar formulários de Raul/Maurício/Cláudio
+            'CAT_Nome' => $request[''],
+            'CAT_Descricao' => $request['']
+            //Esperar formulários de Raul/Maurício/Cláudio
         );
         
         $this->dbtableCategoria->insert($dadosCategoria); //Insere o cargo

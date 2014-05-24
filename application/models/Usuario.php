@@ -30,8 +30,7 @@ class Application_Model_Usuario
         $this->dbtableUsuario = new Application_Model_DbTable_Usuario();
         $this->dbtableLogin = new Application_Model_DbTable_Login();
        
-        
-        $senhaCriptografada = sh1($request['LO_Senha']);
+        $senhaCriptografada = sha1($request['LO_Senha']);
         
         $dadosLogin = array(
             'LO_Login' => $request['LO_Login'],

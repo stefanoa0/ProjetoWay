@@ -29,8 +29,12 @@ class Application_Model_Requisito
         $this->dbtableRequisito = new Application_Model_DbTable_Requisito();
         
         $dadosRequisito = array(
-            'NomeTupla' => $request['Nome do campo de formulário'] //Esperar formulários de Raul/Maurício/Cláudio
-        );
+            'REQ_Nome' => $request['Nome do campo de formulário'], //Esperar formulários de Raul/Maurício/Cláudio
+            'REQ_Descricao' => $request['Nome do campo de formulário'],
+            'Projeto_PRJ_ID' => $request['Nome do campo de formulário']    
+                
+                
+         );
         
         $this->dbtableRequisito->insert($dadosRequisito); //Insere o cargo
 

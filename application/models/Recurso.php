@@ -29,7 +29,12 @@ class Application_Model_Recurso
         $this->dbtableRecurso = new Application_Model_DbTable_Recurso();
         
         $dadosRecurso = array(
-            'NomeTupla' => $request['Nome do campo de formulário'] //Esperar formulários de Raul/Maurício/Cláudio
+            'REC_Nome' => $request[''],
+            'REC_Quantidade' => $request[''],
+            'REC_Valor' => $request[''],
+            'Projeto_PRJ_ID' => $request[''],
+            'Categoria_CAT_ID' => $request['']
+            
         );
         
         $this->dbtableCargo->insert($dadosRecurso); //Insere o cargo

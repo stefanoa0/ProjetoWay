@@ -29,7 +29,8 @@ class Application_Model_Prazo
         $this->dbtablePrazo = new Application_Model_DbTable_Prazo();
         
         $dadosPrazo = array(
-            'NomeTupla' => $request['Nome do campo de formulário'] //Esperar formulários de Raul/Maurício/Cláudio
+            'PRZ_DataInicial' => $request[''],
+            'PRJ_DataFinal' => $request['']//Esperar formulários de Raul/Maurício/Cláudio
         );
         
         $this->dbtablePrazo->insert($dadosPrazo); //Insere o cargo
