@@ -29,11 +29,11 @@ class Application_Model_Recurso
         $this->dbtableRecurso = new Application_Model_DbTable_Recurso();
         
         $dadosRecurso = array(
-            'REC_Nome' => $request[''],
-            'REC_Quantidade' => $request[''],
-            'REC_Valor' => $request[''],
-            'Projeto_PRJ_ID' => $request[''],
-            'Categoria_CAT_ID' => $request['']
+            'REC_Nome' => $request['REC_Nome'],
+            'REC_Quantidade' => $request['REC_quantidade'],
+            'REC_Valor' => $request['REC_valor'],
+            'Projeto_PRJ_ID' => $request['id'],
+            'Categoria_CAT_ID' => $request['categoria']
             
         );
         

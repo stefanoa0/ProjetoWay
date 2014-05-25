@@ -29,8 +29,8 @@ class Application_Model_Categoria
         $this->dbtableCategoria = new Application_Model_DbTable_Categoria();
         
         $dadosCategoria = array(
-            'CAT_Nome' => $request[''],
-            'CAT_Descricao' => $request['']
+            'CAT_Nome' => $request['CAT_Nome'],
+            'CAT_Descricao' => $request['CAT_Descricao']
             //Esperar formulários de Raul/Maurício/Cláudio
         );
         

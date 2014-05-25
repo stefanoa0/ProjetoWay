@@ -1,4 +1,4 @@
-<form name="CadastraRecurso" method="POST" action="CadastraRecurso.php">
+<form name="CadastraRecurso" method="POST" action="<?=$this->url(array("controller"=>"recurso","action"=>"criar"),null,true)?>">
             <input placeholder="Nome" name="REC_Nome" type="text"/>
             <br/>
             <input placeholder="Quantidade" name="REC_quantidade" type="number"/>
@@ -7,11 +7,16 @@
             <input placeholder="Valor" name="REC_valor" type="number" step="any"/>
             <br/> 
             <label>Categoria:</label>
-            <select>
-                <option value="A">A</option>
-                <option value="B">B</option>
-                <option value="C">C</option>
-            </select>
+            <select name="categoria">
+                <?php foreach($this->categorias as $key => $categoria):
+                ?>
+                <option value="<?=$categoria['CAT_ID']?>"><?=$categoria['CAT_Nome']?></option>
+
+                <?php
+                endforeach;
+                ?>
+            </select>   
+    
             <br/>  
             <input type="submit" value="Cadastrar"/>
 </form>
