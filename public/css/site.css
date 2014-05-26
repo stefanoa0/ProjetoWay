@@ -189,6 +189,17 @@ div#view-content > form > [type="submit"]{
     margin-right: 20px;
 }
 
+.caixa_descricao{
+    width:300px;
+    height:100%;
+    margin: 0px;
+    margin-left: 20px;
+}
+
+.caixa_descricao > label{
+    
+}
+
 @media screen and (min-width: 240px) and (max-width: 900px) { 
 	.center-page { 
 		margin:0px;
