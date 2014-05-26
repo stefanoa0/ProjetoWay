@@ -1,23 +1,27 @@
-<form name="CadastraRecurso" method="POST" action="<?=$this->url(array("controller"=>"recurso","action"=>"criar"),null,true)?>">
-            <input type="hidden" name="PRJ_ID" value="<?=$this->projeto['PRJ_ID']?>">
-            <input placeholder="Nome" name="REC_Nome" type="text"/>
-            <br/>
-            <input placeholder="Quantidade" name="REC_quantidade" type="number"/>
-            <br/>            
-            <!-- step="any" para float-->
-            <input placeholder="Valor" name="REC_valor" type="number" step="any"/>
-            <br/> 
-            <label>Categoria:</label>
-            <select name="categoria">
-                <?php foreach($this->categorias as $key => $categoria):
-                ?>
-                <option value="<?=$categoria['CAT_ID']?>"><?=$categoria['CAT_Nome']?></option>
+<h2>Novo Recurso</h2>
+<hr/>
+<div class="center-page"> 
+    <form name="CadastraRecurso" method="POST" action="<?=$this->url(array("controller"=>"recurso","action"=>"criar"),null,true)?>">
+                <input type="hidden" name="PRJ_ID" value="<?=$this->projeto['PRJ_ID']?>">
+                <input placeholder="Nome" name="REC_Nome" type="text"/>
+                <br/>
+                <input placeholder="Quantidade" name="REC_quantidade" type="number"/>
+                <br/>            
+                <!-- step="any" para float-->
+                <input placeholder="Valor" name="REC_valor" type="number" step="any"/>
+                <br/> 
+                <label class="span2">Categoria:</label>
+                <select class="span2" name="categoria">
+                    <?php foreach($this->categorias as $key => $categoria):
+                    ?>
+                    <option value="<?=$categoria['CAT_ID']?>"><?=$categoria['CAT_Nome']?></option>
 
-                <?php
-                endforeach;
-                ?>
-            </select>   
-    
-            <br/>  
-            <input type="submit" value="Cadastrar"/>
-</form>
+                    <?php
+                    endforeach;
+                    ?>
+                </select>   
+
+                <br/>  
+                <input type="submit" value="Cadastrar"/>
+    </form>
+</div>

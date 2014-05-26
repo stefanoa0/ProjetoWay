@@ -1,10 +1,24 @@
-<br /><br />
+<br/>
+<h2>Dados Projeto (Nome do Projeto)</h2>
+<hr/>
 <div class="caixa_descricao" id="projeto_index">
-    <label>Nome: </label><br/>    
-    <label>Descrição: </label><br/>
-    <label>Gerente: </label><br/>
-    <label>Equipe: </label><br/>
-    <label>Recursos: </label><br/>
+    <h4>Descrição</h4><hr/>
+    <label>Nome.: </label><br/><br/>     
+    <label>Descrição.: </label><br/><br/> 
+    <label>Gerente.: </label><br/><br/> 
+    <label>Equipe.: </label><br/><br/> 
+    <label>Recurso.: </label><br/><br/> 
+    <label>Requisitos.: </label><br/><br/> 
+    <label>Prazo.:</label><br/><br/> 
+    <label>Custo.:</label><br/><br/> 
+</div>
+<div class="caixa_descricao" id="projeto_index">
+    <h4>Membros</h4><hr/>
+    <label>Nome: </label><br/><br/>        
+    <label>Descrição: </label><br/><br/>
+    <label>Gerente: </label><br/><br/>
+    <label>Equipe: </label><br/><br/>
+    <label>Recursos: </label><br/><br/>
     <table>
         <?php
             foreach($this->recursos as $key => $recurso):
@@ -16,13 +30,18 @@
     </table>
 
     <label>Requisitos: </label><br/>
-    <?php
+    <table>
+        <?php
             foreach($this->requisitos as $key => $requisito):
         ?>
         <tr>
             <td><?=$requisito['REQ_Nome']?></td>
         </tr>
         <?php endforeach; ?>
+    </table>    
     <label>Prazo:</label><br/>
     <label>Custo:</label><br/>
 </div>
+<form>
+    <input class="button" type="submit" value="Gerar Relatório"/>
+</form>    
