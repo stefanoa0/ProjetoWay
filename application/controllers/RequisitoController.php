@@ -27,7 +27,9 @@ class RequisitoController extends Zend_Controller_Action
     }
     
     public function criarAction(){
-        $this->modelRequisito
+        $this->modelRequisito->insert($this->_getAllParams());
+        
+        $this->redirect('admin/index');
     }
     public function updateAction(){
         

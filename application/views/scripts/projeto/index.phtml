@@ -4,8 +4,25 @@
     <label>Descrição: </label><br/>
     <label>Gerente: </label><br/>
     <label>Equipe: </label><br/>
-    <label>Recurso: </label><br/>
+    <label>Recursos: </label><br/>
+    <table>
+        <?php
+            foreach($this->recursos as $key => $recurso):
+        ?>
+        <tr>
+            <td><?=$recurso['REC_Nome']?></td>
+        </tr>
+        <?php endforeach; ?>
+    </table>
+
     <label>Requisitos: </label><br/>
+    <?php
+            foreach($this->requisitos as $key => $requisito):
+        ?>
+        <tr>
+            <td><?=$requisito['REQ_Nome']?></td>
+        </tr>
+        <?php endforeach; ?>
     <label>Prazo:</label><br/>
     <label>Custo:</label><br/>
 </div>
