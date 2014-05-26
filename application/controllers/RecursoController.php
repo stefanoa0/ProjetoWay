@@ -12,6 +12,7 @@ class RecursoController extends Zend_Controller_Action
         }
         $this->modelCategoria = new Application_Model_Categoria();
         $this->modelRecurso = new Application_Model_Recurso();
+        $this->modelProjeto = new Application_Model_Projeto();
     }
 
     public function indexAction()
@@ -20,9 +21,11 @@ class RecursoController extends Zend_Controller_Action
     }
     
     public function novoAction(){
+        $idProjeto = $this->modelProjeto->find($this->_getParam('id'));
         $categorias = $this->modelCategoria->select();
         
         $this->view->assign('categorias', $categorias);
+        $this->view->assign('projeto', $idProjeto);
     }
     public function criarAction(){
         

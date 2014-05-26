@@ -1,4 +1,5 @@
 <form name="CadastraRecurso" method="POST" action="<?=$this->url(array("controller"=>"recurso","action"=>"criar"),null,true)?>">
+            <input type="hidden" name="PRJ_ID" value="<?=$this->projeto['PRJ_ID']?>">
             <input placeholder="Nome" name="REC_Nome" type="text"/>
             <br/>
             <input placeholder="Quantidade" name="REC_quantidade" type="number"/>

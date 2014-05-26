@@ -10,6 +10,9 @@ class RequisitoController extends Zend_Controller_Action
         } else {
             $this->_redirect('index');
         }
+        $this->modelRequisito = new Application_Model_Requisito();
+        $this->modelProjeto = new Application_Model_Projeto();
+        
     }
 
     public function indexAction()
@@ -18,9 +21,14 @@ class RequisitoController extends Zend_Controller_Action
     }
     
     public function novoAction(){
-        
+        $idProjeto = $this->modelProjeto->find($this->_getParam('id'));
+       
+        $this->view->assign('projeto', $idProjeto);
     }
     
+    public function criarAction(){
+        $this->modelRequisito
+    }
     public function updateAction(){
         
     }
