@@ -35,13 +35,22 @@ class Application_Model_Equipe
         );
         $idEquipe = $this->dbtableEquipe->insert($dadosEquipe);
         
-        $dadosEquipeTrabalhaProjeto = array(
-                'Equipe_EQ_ID' => $idEquipe,
-                'Projeto_PRJ_ID' => $request['id']
+        //tabela usuario equipe
+        $usuarioTrabalhaEquipe = new Application_Model_DbTable_UsuarioTrabalhaEquipe();
+        $dadosUsuario =  array(
+            'Equipe_EQ_ID' => $idEquipe,
+            'Usuário_US_ID' => $request['Usuario1']
+        );
+        $usuarioTrabalhaEquipe->insert($dadosUsuario);
+        
+        //outra tabela
+        /*$dadosEquipeTrabalhaProjeto = array(
+            'Projeto_PRJ_ID' => $request['PRJ_ID'],
+                'Equipe_EQ_ID' => $idEquipe                
         );
         
         $equipeTrabalhaProjeto->insert($dadosEquipeTrabalhaProjeto);
-
+*/
         return;
     }
     

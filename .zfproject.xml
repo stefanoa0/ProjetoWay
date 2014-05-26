@@ -40,6 +40,8 @@
         </controllerFile>
         <controllerFile controllerName="Usuario">
           <actionMethod actionName="index"/>
+          <actionMethod actionName="usuarioEquipe"/>
+          <actionMethod actionName="adicionaNaEquipe"/>
         </controllerFile>
         <controllerFile controllerName="Admin">
           <actionMethod actionName="index"/>
@@ -82,6 +84,8 @@
         </dbTableDirectory>
         <modelFile modelName="AlteracaoSenha"/>
         <modelFile modelName="Login"/>
+        <modelFile modelName="Equipetrabalhaprojeto"/>
+        <modelFile modelName="UsuarioTrabalhaEquipe"/>
       </modelsDirectory>
       <modulesDirectory enabled="false"/>
       <servicesDirectory enabled="false"/>
@@ -128,6 +132,12 @@
           </viewControllerScriptsDirectory>
           <viewControllerScriptsDirectory forControllerName="EsqueciSenha">
             <viewScriptFile forActionName="index"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Usuario">
+            <viewScriptFile forActionName="usuarioEquipe"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Usuario">
+            <viewScriptFile forActionName="adicionaNaEquipe"/>
           </viewControllerScriptsDirectory>
         </viewScriptsDirectory>
         <viewHelpersDirectory/>

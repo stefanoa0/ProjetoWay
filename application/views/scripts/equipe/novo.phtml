@@ -3,7 +3,7 @@
 <div class="center-page">
     <form name="cadastrarEquipe" method="POST" action="<?=$this->url(array("controller"=>"equipe","action"=>"criar"),null,true)?>">
         <input name="PRJ_ID" type="hidden" value="<?=$cargo['CA_ID']?>">
-        <input placeholder="Nome" name="EQ_nome" type="text"/>
+        <input placeholder="Nome" name="EQ_Nome" type="text"/>
         <br/>
         <input placeholder="custo" name="EQ_CustoEquipe" type="number" step="any"/>
         <br/>
@@ -19,10 +19,10 @@
 
         </select>
         <label>Projeto:</label>
-        <select name ="Usuario1">
-            <?php foreach($this->usuarios as $key => $usuario):
+        <select name ="Projeto">
+            <?php foreach($this->projetos as $key => $usuario):
             ?>
-            <option value="<?=$usuario['US_ID']?>"><?=$usuario['US_Nome']?></option>
+            <option value="<?=$usuario['PRJ_ID']?>"><?=$usuario['PRJ_Nome']?></option>
 
             <?php
             endforeach;

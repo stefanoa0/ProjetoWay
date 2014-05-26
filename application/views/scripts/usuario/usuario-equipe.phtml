@@ -1,0 +1,13 @@
+<label>Usuarios na equipe: fazer em breve</label><br/>
+<form action="<?= $this->url(array("controller" => "usuario", "action" => "adiciona-na-equipe"), null, true) ?>" method="post">
+    <input name="idEquipe" value="<?php echo $this->idEquipe ?>" type="hidden" />
+    <select name="Usuario1">
+        <?php foreach ($this->usuarios as $key => $usuario):
+            ?>
+            <option value="<?= $usuario['US_ID'] ?>"><?= $usuario['US_Nome'] ?></option>
+            <?php
+        endforeach;
+        ?>
+    </select>
+    <input type="submit" value="Cadastrar" />
+</form>

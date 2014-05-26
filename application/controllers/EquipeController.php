@@ -33,14 +33,15 @@ class EquipeController extends Zend_Controller_Action
         
     }
     public function criarAction(){
-        $idProjeto = $this->_getParam('id');
+        /*$idProjeto = $this->_getParam('id');
         $usuario = $this->_getParam('Usuario1');
         $nomeEquipe = $this->_getParam('EQ_Nome');
         $custoEquipe = $this->_getParam('EQ_CustoEquipe');
         //$this->modelUsuario->insert();
-        $allParam = array ($usuario, $nomeEquipe, $custoEquipe, $idProjeto);
+        $allParam = array ($usuario, $nomeEquipe, $custoEquipe, $idProjeto);*/
         
-        $this->modelEquipe->insert($allParam);
+        $this->modelEquipe->insert($this->_getAllParams());
+        $this->redirect('admin/index');
     }
     
     public function updateAction(){
