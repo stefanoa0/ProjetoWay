@@ -1,18 +1,22 @@
 <br /><br />
 <!-- Pagina depois de fazer login -->
 <div id="view-content">    
-    <div id="projetos">
-        <?php
-        foreach ($this->projetos as $key => $projeto):        
-        ?>
-        <fieldset>
-            <a href="<?= $this->url(array("controller" => "projeto", "action" => "index", "id" => $projeto["PRJ_ID"]), null, true) ?>"><label><?= $projeto['PRJ_Nome'] ?></label></a><br/>
-            <a class="icon-paste2" href="<?= $this->url(array("controller" => "requisito", "action" => "novo", "id" => $projeto["PRJ_ID"]), null, true) ?>"></a>
-            <a class="icon-notebook"href="<?= $this->url(array("controller" => "recurso", "action" => "novo", "id" => $projeto["PRJ_ID"]), null, true) ?>"></a>
-        </fieldset>
-        <?php
-        endforeach;
-        ?>
-    </div>
+    <h1>Projetos</h1> 
+    <hr/>
+    <div class="janela_projeto center-page">
+        <div class="caixa_projeto" id="projetos">
+            <?php
+            foreach ($this->projetos as $key => $projeto):        
+            ?>
+            <fieldset>
+                <a href="<?= $this->url(array("controller" => "projeto", "action" => "index", "id" => $projeto["PRJ_ID"]), null, true) ?>"><label><?= $projeto['PRJ_Nome'] ?></label></a><br/>
+                <a class="icon-paste2" style="float:right;" href="<?= $this->url(array("controller" => "requisito", "action" => "novo", "id" => $projeto["PRJ_ID"]), null, true) ?>"></a>
+                <a class="icon-notebook" style="float:right;" href="<?= $this->url(array("controller" => "recurso", "action" => "novo", "id" => $projeto["PRJ_ID"]), null, true) ?>"></a>
+            </fieldset>
+            <?php
+            endforeach;
+            ?>
+        </div>
+    </div>    
 
 </div>

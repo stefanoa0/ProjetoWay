@@ -1,15 +1,15 @@
-<form name="cadastrarprojeto" method="POST" action="<?=$this->url(array("controller"=>"projeto","action"=>"criar"),null,true)?>">
-            <input placeholder="Nome" name="PRJ_Nome" type="text"/>
-            <br/>
-            <input placeholder="Descricao" name="PRJ_Descricao" type="text"/>
-            <br/>              
-            <label>Data inicial:</label><br/>
-            <input name="PRZ_Datainicial" type="date"/>                
-            <br/>            
-            <label>Data final:</label><br/>
-            <input  name="PRZ_Datafinal" type="date"/>
-            <br/>
-            <input  name="CT_Inicial" type="text" placeholder="Custo Inicial"/>   
-            <br/>
-            <input type="submit" value="Cadastrar"/>
-</form>
+<h1>Novo Projeto</h1>
+<hr/>
+<div class="center-page">
+    <form name="cadastrarprojeto" method="POST" action="<?=$this->url(array("controller"=>"projeto","action"=>"criar"),null,true)?>">
+        <input placeholder="Nome" name="PRJ_Nome" type="text"/>
+        <input placeholder="Descricao" name="PRJ_Descricao" type="text"/>
+        <label class="span">Ínicio.:</label>
+        <label class="span">Término.:</label><br/>
+        <input class="span" name="PRZ_Datainicial" type="date"/> 
+        <input  class="span" name="PRZ_Datafinal" type="date"/>
+        <input  name="CT_Inicial" type="text" placeholder="Custo Inicial"/>   
+        <br/>
+        <input type="submit" value="Cadastrar"/>
+    </form>
+</div>

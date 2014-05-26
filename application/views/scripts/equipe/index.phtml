@@ -1,18 +1,24 @@
 <br /><br />
 <!-- Pagina depois de fazer login -->
-<div id="view-content">    
-    <div id="equipes">
-        <?php
-        foreach ($this->equipes as $key => $equipe):        
-        ?>
-        <fieldset>
-            <a href="<?= $this->url(array("controller" => "projeto", "action" => "index", "id" => $equipe["EQ_ID"]), null, true) ?>"><label><?= $equipe['EQ_Nome'] ?></label></a><br/>
-            <a class="icon-user2" href="<?= $this->url(array("controller" => "usuario", "action" => "usuario-equipe", "id" => $equipe["EQ_ID"]), null, true) ?>"></a>
-            <a class="icon-file3" href="<?= $this->url(array("controller" => "projeto", "action" => "equipe-projeto", "id" => $projeto["PRJ_ID"]), null, true) ?>"></a>
-        </fieldset>
-        <?php
-        endforeach;
-        ?>
+<div id="view-content">       
+    <form action="<?= $this->url(array("controller" => "equipe", "action" => "novo"), null, true) ?>" method="post">
+        <input style="float:right;" value="Nova Equipe" type="submit">
+    </form>
+    <h1>Equipes</h1>
+    <hr/>
+    <div class="janela_projeto center-page">
+        <div class="caixa_projeto" id="equipes">
+            <?php
+            foreach ($this->equipes as $key => $equipe):        
+            ?>
+            <fieldset>
+                <a href="<?= $this->url(array("controller" => "projeto", "action" => "index", "id" => $equipe["EQ_ID"]), null, true) ?>"><label><?= $equipe['EQ_Nome'] ?></label></a><br/>
+                <a class="icon-user2" style="float:right;" href="<?= $this->url(array("controller" => "usuario", "action" => "usuario-equipe", "id" => $equipe["EQ_ID"]), null, true) ?>"></a>
+                <a class="icon-file3" style="float:right;" href="<?= $this->url(array("controller" => "projeto", "action" => "equipe-projeto", "id" => $projeto["PRJ_ID"]), null, true) ?>"></a>
+            </fieldset>
+            <?php
+            endforeach;
+            ?>
+        </div>
     </div>
-    <a href="<?= $this->url(array("controller" => "equipe", "action" => "novo"), null, true) ?>"><label>NovaEquipe</label></a><br/>
 </div>
