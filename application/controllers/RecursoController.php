@@ -10,6 +10,8 @@ class RecursoController extends Zend_Controller_Action
         } else {
             $this->_redirect('index');
         }
+        $this->modelCategoria = new Application_Model_Categoria();
+        $this->modelRecurso = new Application_Model_Recurso();
     }
 
     public function indexAction()
@@ -18,7 +20,15 @@ class RecursoController extends Zend_Controller_Action
     }
     
     public function novoAction(){
+        $categorias = $this->modelCategoria->select();
         
+        $this->view->assign('categorias', $categorias);
+    }
+    public function criarAction(){
+        
+        $this->modelRecurso->insert($this->_getAllParams());
+        
+        $this->redirect('admin/index');
     }
     
     public function updateAction(){
@@ -32,6 +42,7 @@ class RecursoController extends Zend_Controller_Action
     public function deleteAction(){
         
     }
+    
 
 
 }
