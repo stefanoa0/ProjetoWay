@@ -190,18 +190,27 @@ div#view-content > form > [type="submit"]{
 }
 
 .caixa_descricao{
-    width:650px;
-    height:100%;
+    width:45%;
+    height:400px;
     margin: 0px;
     margin-left: 25px;
     margin-top: 10px;
     background-color: #14CC7C;
     float:left;
+    overflow: auto;
 }
 
 .caixa_descricao > label{
     padding: 5px;
 }
+
+.button{
+        width: 100px;
+        height: 40px;
+        margin-right: 20px;
+        margin-top: 40px;
+        float:right;
+    }
 
 @media screen and (min-width: 240px) and (max-width: 900px) { 
 	.center-page { 

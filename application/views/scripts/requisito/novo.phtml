@@ -1,7 +1,12 @@
-<form name="CadastraRequisito" method="POST" action="CadastraRequisito.php">
-            <input placeholder="Nome" name="REQ_Nome" type="text"/>
-            <br/>
-            <input placeholder="Descrição" name="REQ_Descricao" type="text"/>
-            <br/>            
-            <input type="submit" value="Cadastrar"/>
-</form>
+<h2>Novo Requisito</h2>
+<hr/>
+<div class="center-page"> 
+    <form name="CadastraRequisito" method="POST" action="<?=$this->url(array("controller"=>"requisito","action"=>"criar"),null,true)?>">
+        <input type="hidden" name="PRJ_ID" value="<?=$this->projeto['PRJ_ID']?>">
+        <input placeholder="Nome" name="REQ_Nome" type="text"/>
+        <br/>
+        <input placeholder="Descrição" name="REQ_Descricao" type="text"/>
+        <br/>            
+        <input type="submit" value="Cadastrar"/>
+    </form>
+</div>    

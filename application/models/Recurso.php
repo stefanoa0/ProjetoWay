@@ -32,12 +32,12 @@ class Application_Model_Recurso
             'REC_Nome' => $request['REC_Nome'],
             'REC_Quantidade' => $request['REC_quantidade'],
             'REC_Valor' => $request['REC_valor'],
-            'Projeto_PRJ_ID' => $request['id'],
+            'Projeto_PRJ_ID' => $request['PRJ_ID'],
             'Categoria_CAT_ID' => $request['categoria']
             
         );
         
-        $this->dbtableCargo->insert($dadosRecurso); //Insere o cargo
+        $this->dbtableRecurso->insert($dadosRecurso); //Insere o cargo
 
         return;
     }

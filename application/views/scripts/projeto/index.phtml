@@ -1,4 +1,6 @@
-<br /><br />
+<br/>
+<h2>Dados Projeto (Nome do Projeto)</h2>
+<hr/>
 <div class="caixa_descricao" id="projeto_index">
     <h4>Descrição</h4><hr/>
     <label>Nome.: </label><br/><br/>     
@@ -12,5 +14,34 @@
 </div>
 <div class="caixa_descricao" id="projeto_index">
     <h4>Membros</h4><hr/>
+    <label>Nome: </label><br/><br/>        
+    <label>Descrição: </label><br/><br/>
+    <label>Gerente: </label><br/><br/>
+    <label>Equipe: </label><br/><br/>
+    <label>Recursos: </label><br/><br/>
+    <table>
+        <?php
+            foreach($this->recursos as $key => $recurso):
+        ?>
+        <tr>
+            <td><?=$recurso['REC_Nome']?></td>
+        </tr>
+        <?php endforeach; ?>
+    </table>
 
+    <label>Requisitos: </label><br/>
+    <table>
+        <?php
+            foreach($this->requisitos as $key => $requisito):
+        ?>
+        <tr>
+            <td><?=$requisito['REQ_Nome']?></td>
+        </tr>
+        <?php endforeach; ?>
+    </table>    
+    <label>Prazo:</label><br/>
+    <label>Custo:</label><br/>
 </div>
+<form>
+    <input class="button" type="submit" value="Gerar Relatório"/>
+</form>    
