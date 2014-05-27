@@ -28,7 +28,7 @@
                         <a href="#" id="loginButton"><span class="icon-enter"></span></a>
                         <div style="clear:both"></div>
                         <div id="loginBox">                
-                            <form id="loginForm" action="<?=$this->url(array('controller'=>'autenticacao','action'=>'login'),null,true)?>" method="POST">
+                            <form id="loginForm" action="<?= $this->url(array('controller' => 'autenticacao', 'action' => 'login'), null, true) ?>" method="POST">
                                 <fieldset id="body">
                                     <fieldset>
                                         <input placeholder="Usuário" name="LO_Login" type="text"/>
@@ -39,18 +39,21 @@
                                     <input type="submit" id="login" value="Entrar" />
                                     <label for="checkbox"><input type="checkbox" id="checkbox" />Remember me</label>
                                 </fieldset>
-                                <span><a href="<?=$this->url(array("controller"=>"esqueci-senha","action"=>"index"),null,true)?>">Forgot your password?</a></span>
+                                <span><a href="<?= $this->url(array("controller" => "esqueci-senha", "action" => "index"), null, true) ?>">Forgot your password?</a></span>
                             </form>
                         </div>
                     </div>
                 </li>					
-                <li style="float:right;"><a href="<?=$this->url(array("controller"=>"index","action"=>"novo"),null,true)?>"><span class="icon-plus"></span></a></li>			
-                <li style="float:right;"><a href="<?=$this->url(array("controller"=>"index","action"=>"index"),null,true)?>"><span class="icon-home"></span></a></li>
+                <li style="float:right;"><a href="<?= $this->url(array("controller" => "index", "action" => "novo"), null, true) ?>"><span class="icon-plus"></span></a></li>			
+                <li style="float:right;"><a href="<?= $this->url(array("controller" => "index", "action" => "index"), null, true) ?>"><span class="icon-home"></span></a></li>
                 </li>
             </ul>
         </div>
         <div id="conteudo">
             <?php echo $this->layout()->content; ?>
+        </div>
+        <div id="rodape">
+            <p> Copyright @ 2014 - Sistema Way - Desenvolvido por EasyTec</p>
         </div>
     </body>
 </html>

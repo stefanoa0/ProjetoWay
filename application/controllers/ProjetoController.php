@@ -1,10 +1,8 @@
 <?php
 
-class ProjetoController extends Zend_Controller_Action
-{
+class ProjetoController extends Zend_Controller_Action {
 
-    public function init()
-    {
+    public function init() {
         $this->modelPrazo = new Application_Model_Prazo();
         $this->modelProjeto = new Application_Model_Projeto();
 
@@ -17,32 +15,34 @@ class ProjetoController extends Zend_Controller_Action
         $this->view->usuarioLogado = $this->usuarioLogado;
     }
 
-    public function indexAction()
-    {
-        // action body
+    public function indexAction() {
+        //id do projeto para exibir o projeto correto
+        $idProjeto = $this->_getParam('id');
+        $modelProjeto = new Application_Model_Projeto();
+        $projeto = $modelProjeto->select("PRJ_ID = $idProjeto");
+        $this->view->assign("projeto", $projeto);
     }
-    
-    public function novoAction(){
+
+    public function novoAction() {
         
     }
-    
-    public function criarAction(){
+
+    public function criarAction() {
         $this->modelProjeto->insert($this->_getAllParams());
-        
+
         $this->redirect('admin/index');
     }
-    public function updateAction(){
-        
-    }
-    
-    public function editarAction(){
-        
-    }
-    
-    public function deleteAction(){
+
+    public function updateAction() {
         
     }
 
+    public function editarAction() {
+        
+    }
+
+    public function deleteAction() {
+        
+    }
 
 }
-
