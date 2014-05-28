@@ -34,9 +34,13 @@ class UsuarioController extends Zend_Controller_Action
         $this->view->assign("usuarios",$usuarios);
         
         //Exibir todos os usuarios na equipe
-        $modelUsuarioTrabalhaEquipe = new Application_Model_UsuarioTrabalhaEquipe();        
-        $usuariosNaEquipe = $modelUsuarioTrabalhaEquipe->select("Equipe_EQ_ID = $idEquipe");
+        $dbtableVUsuariosEquipe = new Application_Model_Vusuariosequipe();
+        $usuariosNaEquipe = $dbtableVUsuariosEquipe->find($idEquipe);
         $this->view->assign("usuariosNaEquipe",$usuariosNaEquipe);
+        
+        /*$modelUsuarioTrabalhaEquipe = new Application_Model_UsuarioTrabalhaEquipe();        
+        $usuariosNaEquipe = $modelUsuarioTrabalhaEquipe->select("Equipe_EQ_ID = $idEquipe");
+        $this->view->assign("usuariosNaEquipe",$usuariosNaEquipe);*/
         //$this->view->usuariosNaEquipe = $usuariosNaEquipe;
     }
 

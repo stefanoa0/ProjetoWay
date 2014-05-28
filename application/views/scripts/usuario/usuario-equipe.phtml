@@ -1,4 +1,9 @@
 <label>Usuarios na equipe: fazer em breve</label><br/>
+<?php foreach ($this->usuariosNaEquipe as $key => $usuarioNaEquipe):
+     echo $usuarioNaEquipe['US_Nome'];
+     echo "<br/>";
+endforeach;
+    ?>   
 <form action="<?= $this->url(array("controller" => "usuario", "action" => "adiciona-na-equipe"), null, true) ?>" method="post">
     <input name="idEquipe" value="<?php echo $this->idEquipe ?>" type="hidden" />
     <select name="Usuario1">

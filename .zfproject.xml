@@ -81,11 +81,13 @@
           <dbTableFile dbTableName="UsuarioTrabalhaEquipe"/>
           <dbTableFile dbTableName="AlteracaoSenha"/>
           <dbTableFile dbTableName="Login"/>
+          <dbTableFile dbTableName="Vusuariosequipe"/>
         </dbTableDirectory>
         <modelFile modelName="AlteracaoSenha"/>
         <modelFile modelName="Login"/>
         <modelFile modelName="Equipetrabalhaprojeto"/>
         <modelFile modelName="UsuarioTrabalhaEquipe"/>
+        <modelFile modelName="Vusuariosequipe"/>
       </modelsDirectory>
       <modulesDirectory enabled="false"/>
       <servicesDirectory enabled="false"/>
