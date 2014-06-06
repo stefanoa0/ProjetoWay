@@ -18,9 +18,14 @@ class ProjetoController extends Zend_Controller_Action {
     public function indexAction() {
         //id do projeto para exibir o projeto correto
         $idProjeto = $this->_getParam('id');
+        //projeto
         $modelProjeto = new Application_Model_Projeto();
-        $projeto = $modelProjeto->select("PRJ_ID = $idProjeto");
+        $projeto = $modelProjeto->select("PRJ_ID = $idProjeto");                
         $this->view->assign("projeto", $projeto);
+        //requisitos do projeto
+        $modelRequisito = new Application_Model_Requisito();
+        //$requisitos = $
+        
     }
 
     public function novoAction() {
