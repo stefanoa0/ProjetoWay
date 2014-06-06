@@ -14,8 +14,8 @@
                 ?>
                 <fieldset>
                     <a href="<?= $this->url(array("controller" => "projeto", "action" => "index", "id" => $equipe["EQ_ID"]), null, true) ?>"><label><?= $equipe['EQ_Nome'] ?></label></a><br/>
-                    <a class="icon-user2" style="float:right;" href="<?= $this->url(array("controller" => "usuario", "action" => "usuario-equipe", "id" => $equipe["EQ_ID"]), null, true) ?>"></a>
-                    <a class="icon-file3" style="float:right;" href="<?= $this->url(array("controller" => "projeto", "action" => "equipe-projeto", "id" => $projeto["PRJ_ID"]), null, true) ?>"></a>
+                    <a style="float:right;" href="<?= $this->url(array("controller" => "usuario", "action" => "usuario-equipe", "id" => $equipe["EQ_ID"]), null, true) ?>"><span class="icon-user2" title="Integrante(s)"></span></a>
+                    <a style="float:right;" href="<?= $this->url(array("controller" => "projeto", "action" => "equipe-projeto", "id" => $projeto["PRJ_ID"]), null, true) ?>"><span class="icon-file3" title="Equipe do Projeto"></span></a>
                 </fieldset>
                 <?php
             endforeach;

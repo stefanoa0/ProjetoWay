@@ -21,11 +21,11 @@
     <body>
         <div class="menu">
             <ul>
-                <li><a href="index.php"><strong>Projeto Way</strong></a></li>
+                <li><a href="index.php" title="Home"><strong>Projeto Way</strong></a></li>
                 <span class="dividir"></span>		
                 <li style="float:right;">
                     <div id="loginContainer">
-                        <a href="#" id="loginButton"><span class="icon-enter"></span></a>
+                        <a href="#" id="loginButton" title="Login"><span class="icon-enter"></span></a>
                         <div style="clear:both"></div>
                         <div id="loginBox">                
                             <form id="loginForm" action="<?= $this->url(array('controller' => 'autenticacao', 'action' => 'login'), null, true) ?>" method="POST">
@@ -44,8 +44,8 @@
                         </div>
                     </div>
                 </li>					
-                <li style="float:right;"><a href="<?= $this->url(array("controller" => "index", "action" => "novo"), null, true) ?>"><span class="icon-plus"></span></a></li>			
-                <li style="float:right;"><a href="<?= $this->url(array("controller" => "index", "action" => "index"), null, true) ?>"><span class="icon-home"></span></a></li>
+                <li style="float:right;"><a href="<?= $this->url(array("controller" => "index", "action" => "novo"), null, true) ?>"><span class="icon-plus" title="Cadastrar"></span></a></li>			
+                <li style="float:right;"><a href="<?= $this->url(array("controller" => "index", "action" => "index"), null, true) ?>"><span class="icon-home" title="Home"></span></a></li>
                 </li>
             </ul>
         </div>

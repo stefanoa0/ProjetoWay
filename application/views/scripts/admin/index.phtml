@@ -11,8 +11,8 @@
                 ?>
                 <fieldset>
                     <a href="<?= $this->url(array("controller" => "projeto", "action" => "index", "id" => $projeto["PRJ_ID"]), null, true) ?>"><label><?= $projeto['PRJ_Nome'] ?></label></a><br/>
-                    <a class="icon-paste2" style="float:right;" href="<?= $this->url(array("controller" => "requisito", "action" => "novo", "id" => $projeto["PRJ_ID"]), null, true) ?>"></a>
-                    <a class="icon-notebook" style="float:right;" href="<?= $this->url(array("controller" => "recurso", "action" => "novo", "id" => $projeto["PRJ_ID"]), null, true) ?>"></a>
+                    <a style="float:right;" href="<?= $this->url(array("controller" => "requisito", "action" => "novo", "id" => $projeto["PRJ_ID"]), null, true) ?>"><span class="icon-paste2" title="Novo Requisito"></span></a>
+                    <a style="float:right;" href="<?= $this->url(array("controller" => "recurso", "action" => "novo", "id" => $projeto["PRJ_ID"]), null, true) ?>"><span class="icon-notebook" title="Novo Recurso"></sapn></a>
                 </fieldset>
                 <?php
             endforeach;

@@ -25,23 +25,23 @@
                 <span class="dividir"></span>		
                 <li style="float:right;">
                     <div id="loginContainer">
-                        <a href="#" id="loginButton"><span class="icon-user3"></span></a>
+                        <a href="#" id="loginButton" title="Perfil"><span class="icon-user3"></span></a>
                         <div style="clear:both"></div>
                         <div id="loginBox">                
                             <form id="loginForm" action="home.php">
                                 <fieldset id="body">										
-                                    <a style="float:left;"  id="loginButton"><span class="icon-exit"></span></a>
-                                    <a style="float:left;"<a href="<?=$this->url(array("controller"=>"admin","action"=>"logout"),null,true)?>" id="loginButton"><span class="icon-cog"></span></a>
+                                    <a style="float:left;"  id="loginButton"><span class="icon-cog" title="Configurações"></span></a>
+                                    <a style="float:left;"<a href="<?=$this->url(array("controller"=>"admin","action"=>"logout"),null,true)?>" id="loginButton"><span class="icon-exit" title="Logout"></span></a>
                                     <!-- FECHAR SESSÃO AO SAIR -->
                                 </fieldset>
                             </form>
                         </div>
                     </div>
                 </li>					
-                <li style="float:right;"><a href="<?=$this->url(array("controller"=>"projeto","action"=>"novo"),null,true)?>"><span class="icon-file3"></span></a></li>			
-                <li style="float:right;"><a href="<?=$this->url(array("controller"=>"admin","action"=>"index"),null,true)?>"><span class="icon-home"></span></a></li>
-                <li style="float:right;"><a class="icon-users2" href="<?= $this->url(array("controller" => "equipe", "action" => "index"), null, true) ?>"></a></li>
-                <li style="float:right;"><a class="icon-tags" href="<?= $this->url(array("controller" => "categoria", "action" => "novo"), null, true) ?>"></a></li>
+                <li style="float:right;"><a href="<?=$this->url(array("controller"=>"projeto","action"=>"novo"),null,true)?>"><span class="icon-file3" title="Novo Escopo"></span></a></li>			
+                <li style="float:right;"><a href="<?=$this->url(array("controller"=>"admin","action"=>"index"),null,true)?>"><span class="icon-home" title="Home"></span></a></li>
+                <li style="float:right;"><a href="<?= $this->url(array("controller" => "equipe", "action" => "index"), null, true) ?>"><span class="icon-users2" title="Equipes"></span></a></li>
+                <li style="float:right;"><a href="<?= $this->url(array("controller" => "categoria", "action" => "novo"), null, true) ?>"><span class="icon-tags" title="Nova Categoria"></span></a></li>
             </li>
             </ul>
         </div>
