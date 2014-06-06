@@ -57,7 +57,7 @@ a { text-decoration:none }
     border-radius:3px 0 3px 3px;
     -moz-border-radius:3px 0 3px 3px;
     margin-top:-1px;
-    background:#006900;
+    background:#228B22;
     padding:6px;
 }
 
@@ -69,7 +69,7 @@ a { text-decoration:none }
 }
 
 fieldset#body {
-    background:#006900;
+    background:#228B22;
     border-radius:3px;
     -moz-border-radius:3px;
     padding:10px 13px;
