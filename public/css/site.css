@@ -131,6 +131,8 @@ label{
 
 
 .caixa{
+    font-size: 18px;
+    color: #FFF;
     background: #3CB371;
     width: 100%;
     height: 100px;
@@ -195,7 +197,7 @@ div#view-content > form > [type="submit"]{
     margin: 0px;
     margin-left: 25px;
     margin-top: 10px;
-    background-color: #14CC7C;
+    background-color: #bbb;
     float:left;
     overflow: auto;
 }

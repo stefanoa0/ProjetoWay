@@ -19,9 +19,9 @@ class Application_Model_Requisito
     
     public function find($id) //Função Find para buscar na tabela 
     {
-        $this->dbtableRequisito = new Application_Model_DbTable_Requisito(); 
+        $this->dbtableRequisito = new Application_Model_DbTable_VRequisitosProjeto(); 
         $arr = $this->dbtableRequisito->find($id)->toArray();
-        return $arr[0];
+        return $arr;
     }
     
     public function insert(array $request) // Função insert

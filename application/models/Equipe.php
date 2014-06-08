@@ -19,11 +19,16 @@ class Application_Model_Equipe
     
     public function find($id) //Função Find para buscar na tabela 
     {
-        $this->dbtableEquipe = new Application_Model_DbTable_Equipe(); 
+        $this->dbtableEquipe = new Application_Model_DbTable_VEquipeTrabalhaProjeto(); 
         $arr = $this->dbtableEquipe->find($id)->toArray();
         return $arr[0];
     }
-    
+    public function findUsuarios($id) //Função Find para buscar na tabela 
+    {
+        $this->dbtableEquipe = new Application_Model_DbTable_VUsuarioTrabalhaEquipe(); 
+        $arr = $this->dbtableEquipe->find($id)->toArray();
+        return $arr;
+    }
     public function insert(array $request) // Função insert
     {
         $this->dbtableEquipe = new Application_Model_DbTable_Equipe();

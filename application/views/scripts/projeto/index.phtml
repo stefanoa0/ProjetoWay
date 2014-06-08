@@ -1,47 +1,46 @@
 <br/>
-<h2>Dados Projeto (Nome do Projeto)</h2>
+<h2>Dados Projeto:</h2>
 <hr/>
 <div class="caixa_descricao" id="projeto_index">
     <h4>Descrição</h4><hr/>
     
-    <label>Nome.: <?php echo $this->projeto[0]['PRJ_Nome']; ?></label><br/><br/>             
-    <label>Descrição.:  <?php echo $this->projeto[0]['PRJ_Descricao']; ?> </label><br/><br/>
-    <label>Gerente.: </label><br/><br/> 
-    <label>Equipe.: </label><br/><br/> 
-    <label>Recurso.: </label><br/><br/> 
-    <label>Requisitos.: </label><br/><br/> 
-    <label>Prazo.:</label><br/><br/> 
-    <label>Custo.:</label><br/><br/> 
+    <label>Nome.: <?php echo $this->projeto['PRJ_Nome']; ?></label><br/><br/>             
+    <label>Descrição.:  <?php echo $this->projeto['PRJ_Descricao']; ?> </label><br/><br/>
+    <label>Gerente.:  <?php foreach($this->usuarios as $key => $usuario)
+        { if($usuario['Cargo_CA_ID']==1){
+         echo $usuario['US_Nome'];
+         }
+        } ?></label><br/><br/> 
+    <label>Equipe.: <?php echo $this->equipe['EQ_Nome']; ?></label><br/><br/>
+    <label>Requisitos.: <?php foreach($this->requisitos as $key => $requisito){ echo $requisito['REQ_Nome'].'; '; }?> </label><br/><br/> 
+    <label>Prazo.: <?php echo $this->projeto['PRZ_DataFinal']; ?></label><br/><br/> 
+    <label>Custo.: <?php echo 'R$ :'.$this->projeto['CT_Final']; ?></label><br/><br/> 
 </div>
 <div class="caixa_descricao" id="projeto_index">
-    <h4>Membros</h4><hr/>
-    <label>Nome: </label><br/><br/>        
-    <label>Descrição: </label><br/><br/>
-    <label>Gerente: </label><br/><br/>
-    <label>Equipe: </label><br/><br/>
-    <label>Recursos: </label><br/><br/>
+    <h4>Equipe</h4><hr/>
     <table>
-        <?php
-            foreach($this->recursos as $key => $recurso):
-        ?>
         <tr>
-            <td><?=$recurso['REC_Nome']?></td>
+            <th width="20%">Equipe</th>
+            <th width="50%">Empregado</th>
+            <th width="30%">Cargo</th>
         </tr>
+
+        <?php
+        foreach ($this->usuarios as $key => $usuario):
+            ?>
+            <tr>
+                <td width="20%">
+                    <?php echo $usuario['EQ_Nome'] ?>
+                </td>
+                <td width="50%">
+                    <?php echo $usuario['US_Nome'] ?>
+                </td>
+                <td width="30%">
+                    <?php echo $usuario['CA_Cargo'] ?>
+                </td>
+            </tr>
         <?php endforeach; ?>
     </table>
-
-    <label>Requisitos: </label><br/>
-    <table>
-        <?php
-            foreach($this->requisitos as $key => $requisito):
-        ?>
-        <tr>
-            <td><?=$requisito['REQ_Nome']?></td>
-        </tr>
-        <?php endforeach; ?>
-    </table>    
-    <label>Prazo:</label><br/>
-    <label>Custo:</label><br/>
 </div>
 <form>
     <input class="button" type="submit" value="Gerar Relatório"/>

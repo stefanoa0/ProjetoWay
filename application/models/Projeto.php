@@ -19,7 +19,7 @@ class Application_Model_Projeto
     
     public function find($id) //Função Find para buscar na tabela 
     {
-        $this->dbtableProjeto = new Application_Model_DbTable_Projeto(); 
+        $this->dbtableProjeto = new Application_Model_DbTable_VProjetoTotal(); 
         $arr = $this->dbtableProjeto->find($id)->toArray();
         return $arr[0];
     }
