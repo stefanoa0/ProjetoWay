@@ -1,11 +1,9 @@
-<label>Usuarios na equipe: fazer em breve</label><br/>
-<?php foreach ($this->usuariosNaEquipe as $key => $usuarioNaEquipe):
-     echo $usuarioNaEquipe['US_Nome'];
-     echo "<br/>";
-endforeach;
-    ?>   
-<form action="<?= $this->url(array("controller" => "usuario", "action" => "adiciona-na-equipe"), null, true) ?>" method="post">
-    <input name="idEquipe" value="<?php echo $this->idEquipe ?>" type="hidden" />
+<h3>Adicionar Usuários na Equipe</h3>  
+<form action="<?= $this->url(array("controller" => "usuario", "action" => "adicionanaequipe"), null, true) ?>" method="post">
+    <input name="idEquipe" value="<?php echo $this->equipe['EQ_ID'] ?>" type="hidden" />
+    
+    <?php echo $this->equipe['EQ_Nome'] ?>
+    
     <select name="Usuario1">
         <?php foreach ($this->usuarios as $key => $usuario):
             ?>

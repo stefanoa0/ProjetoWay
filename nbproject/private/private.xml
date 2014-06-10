@@ -9,11 +9,13 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/xampp/htdocs/ProjetoWay/application/models/Projeto.php</file>
-            <file>file:/C:/xampp/htdocs/ProjetoWay/application/controllers/ProjetoController.php</file>
-            <file>file:/C:/xampp/htdocs/ProjetoWay/application/models/DbTable/VUsuarioTrabalhaEquipe.php</file>
+            <file>file:/C:/xampp/htdocs/ProjetoWay/application/views/scripts/equipe/index.phtml</file>
+            <file>file:/C:/xampp/htdocs/ProjetoWay/application/views/scripts/usuario/usuario-equipe.phtml</file>
+            <file>file:/C:/xampp/htdocs/ProjetoWay/application/controllers/UsuarioController.php</file>
             <file>file:/C:/xampp/htdocs/ProjetoWay/application/models/Equipe.php</file>
             <file>file:/C:/xampp/htdocs/ProjetoWay/application/views/scripts/projeto/index.phtml</file>
+            <file>file:/C:/xampp/htdocs/ProjetoWay/application/views/scripts/admin/index.phtml</file>
+            <file>file:/C:/xampp/htdocs/ProjetoWay/application/models/Usuario.php</file>
         </group>
     </open-files>
 </project-private>

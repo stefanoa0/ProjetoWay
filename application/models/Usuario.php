@@ -76,5 +76,17 @@ class Application_Model_Usuario {
 
         $this->dbtableCargo->delete($whereUsuario);
     }
+    
+    public function insertUsuarioEquipe($request){
+        $this->dbtableUsuario = new Application_Model_DbTable_UsuarioTrabalhaEquipe();
+        
+        $dadosUsuario = array(
+            'Usuario_US_ID' => $request['Usuario1'],
+            'Equipe_EQ_ID' => $request['idEquipe']
+        );
+        
+        
+        $this->dbtableUsuario->insert($dadosUsuario);
+    }
 
 }

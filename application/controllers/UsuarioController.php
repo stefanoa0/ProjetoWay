@@ -10,6 +10,8 @@ class UsuarioController extends Zend_Controller_Action
         } else {
             $this->_redirect('index');
         }
+        
+        $this->modelUsuario = new Application_Model_Usuario();
     }
 
     public function indexAction()
@@ -25,18 +27,16 @@ class UsuarioController extends Zend_Controller_Action
     public function usuarioEquipeAction()
     {
         //id da equipe
+        $this->modelEquipe = new Application_Model_Equipe();
         $idEquipe = $this->_getParam('id');
-        $this->view->idEquipe = $idEquipe;
+        $equipe = $this->modelEquipe->findEquipe($idEquipe);
         
+        $this->view->assign("equipe", $equipe);
         //Exibir os usuarios para selecionar
-        $this->modelUsuario = new Application_Model_Usuario();
         $usuarios = $this->modelUsuario->select();
         $this->view->assign("usuarios",$usuarios);
         
         //Exibir todos os usuarios na equipe
-        $dbtableVUsuariosEquipe = new Application_Model_Vusuariosequipe();
-        $usuariosNaEquipe = $dbtableVUsuariosEquipe->find($idEquipe);
-        $this->view->assign("usuariosNaEquipe",$usuariosNaEquipe);
         
         /*$modelUsuarioTrabalhaEquipe = new Application_Model_UsuarioTrabalhaEquipe();        
         $usuariosNaEquipe = $modelUsuarioTrabalhaEquipe->select("Equipe_EQ_ID = $idEquipe");
@@ -44,15 +44,13 @@ class UsuarioController extends Zend_Controller_Action
         //$this->view->usuariosNaEquipe = $usuariosNaEquipe;
     }
 
-    public function adicionaNaEquipeAction()
+    public function adicionanaequipeAction()
     {
-        $usuarioTrabalhaEquipe = new Application_Model_DbTable_UsuarioTrabalhaEquipe();
-        $dadosUsuario =  array(
-            'Equipe_EQ_ID' => $this->_getParam('idEquipe'),
-            'Usuário_US_ID' => $this->_getParam('Usuario1')
-        );
-        $usuarioTrabalhaEquipe->insert($dadosUsuario);
-        $this->_redirect('equipe');
+       
+       $usuarioTrabalhaEquipe = $this->getAllParams();
+       $this->modelUsuario->insertUsuarioEquipe($usuarioTrabalhaEquipe);
+       
+       
     }
 
 
