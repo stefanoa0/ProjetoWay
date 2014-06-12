@@ -50,7 +50,7 @@ class Application_Model_Equipe
         $usuarioTrabalhaEquipe = new Application_Model_DbTable_UsuarioTrabalhaEquipe();
         $dadosUsuario =  array(
             'Equipe_EQ_ID' => $idEquipe,
-            'Usuário_US_ID' => $request['Usuario1']
+            'Usuario_US_ID' => $request['Usuario1']
         );
         $usuarioTrabalhaEquipe->insert($dadosUsuario);
         

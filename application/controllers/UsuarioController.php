@@ -46,10 +46,9 @@ class UsuarioController extends Zend_Controller_Action
 
     public function adicionanaequipeAction()
     {
-       
        $usuarioTrabalhaEquipe = $this->getAllParams();
        $this->modelUsuario->insertUsuarioEquipe($usuarioTrabalhaEquipe);
-       
+       $this->redirect('equipe/index');
        
     }
 

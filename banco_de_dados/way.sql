@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: 08-Jun-2014 às 05:44
+-- Generation Time: 12-Jun-2014 às 04:08
 -- Versão do servidor: 5.6.16
 -- PHP Version: 5.5.11
 
@@ -116,14 +116,16 @@ CREATE TABLE IF NOT EXISTS `equipe` (
   `EQ_Nome` varchar(45) DEFAULT NULL,
   `EQ_CustoEquipe` float DEFAULT NULL,
   PRIMARY KEY (`EQ_ID`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
 
 --
 -- Extraindo dados da tabela `equipe`
 --
 
 INSERT INTO `equipe` (`EQ_ID`, `EQ_Nome`, `EQ_CustoEquipe`) VALUES
-(1, 'Alfa', 10);
+(1, 'Alfa', 10),
+(2, 'Bravo', 8200),
+(3, 'Gama', 1000);
 
 -- --------------------------------------------------------
 
@@ -132,19 +134,24 @@ INSERT INTO `equipe` (`EQ_ID`, `EQ_Nome`, `EQ_CustoEquipe`) VALUES
 --
 
 CREATE TABLE IF NOT EXISTS `equipetrabalhaprojeto` (
+  `EQ_PRJ_ID` int(11) NOT NULL AUTO_INCREMENT,
   `Projeto_PRJ_ID` int(11) NOT NULL,
   `Equipe_EQ_ID` int(11) NOT NULL,
-  PRIMARY KEY (`Projeto_PRJ_ID`,`Equipe_EQ_ID`),
+  PRIMARY KEY (`EQ_PRJ_ID`),
   KEY `fk_EquipeTrabalhaProjeto_Projeto1_idx` (`Projeto_PRJ_ID`),
   KEY `fk_EquipeTrabalhaProjeto_Equipe1_idx` (`Equipe_EQ_ID`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=6 ;
 
 --
 -- Extraindo dados da tabela `equipetrabalhaprojeto`
 --
 
-INSERT INTO `equipetrabalhaprojeto` (`Projeto_PRJ_ID`, `Equipe_EQ_ID`) VALUES
-(1, 1);
+INSERT INTO `equipetrabalhaprojeto` (`EQ_PRJ_ID`, `Projeto_PRJ_ID`, `Equipe_EQ_ID`) VALUES
+(1, 1, 1),
+(2, 1, 2),
+(3, 2, 2),
+(4, 1, 3),
+(5, 3, 3);
 
 -- --------------------------------------------------------
 
@@ -173,7 +180,7 @@ CREATE TABLE IF NOT EXISTS `login` (
   `LO_Senha` varchar(45) DEFAULT NULL,
   `LO_Time` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`LO_ID`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
 
 --
 -- Extraindo dados da tabela `login`
@@ -181,7 +188,8 @@ CREATE TABLE IF NOT EXISTS `login` (
 
 INSERT INTO `login` (`LO_ID`, `LO_Login`, `LO_Senha`, `LO_Time`) VALUES
 (1, 'stefano', '80980fcaf2ab3f243874695f57b2ed065d8e67e4', '2014-05-17 03:00:00'),
-(2, 'claudio', '7c4a8d09ca3762af61e59520943dc26494f8941b', NULL);
+(2, 'claudio', '7c4a8d09ca3762af61e59520943dc26494f8941b', NULL),
+(3, 'raul', '7c4a8d09ca3762af61e59520943dc26494f8941b', NULL);
 
 -- --------------------------------------------------------
 
@@ -297,7 +305,7 @@ CREATE TABLE IF NOT EXISTS `usuario` (
   UNIQUE KEY `US_Email` (`US_Email`),
   KEY `fk_Usuário_Cargo_idx` (`Cargo_CA_ID`),
   KEY `fk_Usuário_Login1_idx` (`Login_LO_ID`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
 
 --
 -- Extraindo dados da tabela `usuario`
@@ -305,7 +313,8 @@ CREATE TABLE IF NOT EXISTS `usuario` (
 
 INSERT INTO `usuario` (`US_ID`, `US_Nome`, `US_CPF`, `Cargo_CA_ID`, `Login_LO_ID`, `US_Email`) VALUES
 (1, 'Stefano', '12345679', 1, 1, 'stefanoazevedo@hotmail.com'),
-(2, 'Claudio', '123456', 2, 2, 'claudio@gmail.com');
+(2, 'Claudio', '123456', 2, 2, 'claudio@gmail.com'),
+(3, 'Raul Cardoso', '123456', 2, 3, 'raulcardoso@gmail.com');
 
 -- --------------------------------------------------------
 
@@ -327,7 +336,12 @@ CREATE TABLE IF NOT EXISTS `usuariotrabalhaequipe` (
 
 INSERT INTO `usuariotrabalhaequipe` (`Equipe_EQ_ID`, `Usuario_US_ID`) VALUES
 (1, 1),
-(1, 2);
+(1, 2),
+(2, 1),
+(2, 2),
+(2, 3),
+(3, 2),
+(3, 3);
 
 -- --------------------------------------------------------
 

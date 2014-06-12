@@ -13,8 +13,9 @@
             foreach ($this->equipes as $key => $equipe):
                 ?>
                 <fieldset>
+                    <a><label><?=$equipe['EQ_Nome']?></label></a>
                     <a style="float:right;" href="<?= $this->url(array("controller" => "usuario", "action" => "usuario-equipe", "id" => $equipe["EQ_ID"]), null, true) ?>"><span class="icon-user2" title="Integrante(s)"></span></a>
-                    <a style="float:right;" href="<?= $this->url(array("controller" => "projeto", "action" => "equipe-projeto", "id" => $projeto["PRJ_ID"]), null, true) ?>"><span class="icon-file3" title="Equipe do Projeto"></span></a>
+                    <a style="float:right;" href="<?= $this->url(array("controller" => "projeto", "action" => "projeto-equipe", "id" => $equipe["EQ_ID"]), null, true) ?>"><span class="icon-file3" title="Equipe do Projeto"></span></a>
                 </fieldset>
                 <?php
             endforeach;

@@ -19,3 +19,17 @@ $(function() {
         }
     });
 });
+
+document.onkeydown=function(e){ 
+    var button = $('#loginButton');
+    var box = $('#loginBox');
+    var form = $('#loginForm');
+    button.removeAttr('href');
+    if(e.which == 17) {
+       box.toggle();
+       button.toggleClass('active');
+     }
+        form.mouseup(function() { 
+        return false;
+        });
+    }

@@ -78,6 +78,18 @@ class Application_Model_Projeto
         
         $this->dbtableProjeto->delete($whereProjeto);
     }
+    
+    public function insertEquipeProjeto(array $request){
+        $this->dbtableProjeto = new Application_Model_DbTable_EquipeTrabalhaProjeto();
+        
+        $dadosEquipe = array(
+            'Projeto_PRJ_ID' => $request['Projeto1'],
+            'Equipe_EQ_ID' => $request['idEquipe']
+        );
+        
+        
+        $this->dbtableProjeto->insert($dadosEquipe);
+    }
 
 }
 

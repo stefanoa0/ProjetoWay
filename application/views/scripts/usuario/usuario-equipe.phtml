@@ -2,7 +2,7 @@
 <form action="<?= $this->url(array("controller" => "usuario", "action" => "adicionanaequipe"), null, true) ?>" method="post">
     <input name="idEquipe" value="<?php echo $this->equipe['EQ_ID'] ?>" type="hidden" />
     
-    <?php echo $this->equipe['EQ_Nome'] ?>
+    <?php echo "Equipe: ".$this->equipe['EQ_Nome'] ?>
     
     <select name="Usuario1">
         <?php foreach ($this->usuarios as $key => $usuario):

@@ -58,5 +58,29 @@ class ProjetoController extends Zend_Controller_Action {
     public function deleteAction() {
         
     }
+    public function projetoEquipeAction()
+    {
+        //id da equipe
+        $this->modelEquipe = new Application_Model_Equipe();
+        $idEquipe = $this->_getParam('id');
+        $equipe = $this->modelEquipe->findEquipe($idEquipe);
+        
+        $this->view->assign("equipe", $equipe);
+        //Exibir os usuarios para selecionar
+        $projetos = $this->modelProjeto->select();
+        $this->view->assign("projeto",$projetos);
+        
+        //Exibir todos os usuarios na equipe
+        
+        /*$modelUsuarioTrabalhaEquipe = new Application_Model_UsuarioTrabalhaEquipe();        
+        $usuariosNaEquipe = $modelUsuarioTrabalhaEquipe->select("Equipe_EQ_ID = $idEquipe");
+        $this->view->assign("usuariosNaEquipe",$usuariosNaEquipe);*/
+        //$this->view->usuariosNaEquipe = $usuariosNaEquipe;
+    }
+    public function adicionaequipeAction(){
+       $equipeTrabalhaProjeto = $this->getAllParams();
+       $this->modelProjeto->insertEquipeProjeto($equipeTrabalhaProjeto);
+       $this->redirect('equipe/index');
+    }
 
 }

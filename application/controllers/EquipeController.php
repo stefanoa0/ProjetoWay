@@ -19,17 +19,16 @@ class EquipeController extends Zend_Controller_Action
     {
         $equipes = $this->modelEquipe->select();
         $this->view->assign("equipes",$equipes);
+        $projetos = $this->modelProjeto->select();
+        $this->view->assign("projetos", $projetos);
     }
     
     public function novoAction(){
         $projetos = $this->modelProjeto->select();
         $this->view->assign("projetos", $projetos);
                 
-
         $usuarios = $this->modelUsuario->select();
         $this->view->assign("usuarios",$usuarios);
-        
-        
         
     }
     public function criarAction(){
@@ -41,7 +40,7 @@ class EquipeController extends Zend_Controller_Action
         $allParam = array ($usuario, $nomeEquipe, $custoEquipe, $idProjeto);*/
         
         $this->modelEquipe->insert($this->_getAllParams());
-        $this->redirect('admin/index');
+        $this->redirect('equipe/index');
     }
     
     public function updateAction(){

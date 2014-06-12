@@ -1,0 +1,16 @@
+<h3>Adicionar Projetos na Equipe</h3>  
+<form action="<?= $this->url(array("controller" => "projeto", "action" => "adicionaequipe"), null, true) ?>" method="post">
+    <input name="idEquipe" value="<?php echo $this->equipe['EQ_ID'] ?>" type="hidden" />
+    
+    <?php echo "Equipe: ".$this->equipe['EQ_Nome'] ?>
+    
+    <select name="Projeto1">
+        <?php foreach ($this->projeto as $key => $projeto):
+            ?>
+            <option value="<?= $projeto['PRJ_ID'] ?>"><?= $projeto['PRJ_Nome'] ?></option>
+            <?php
+        endforeach;
+        ?>
+    </select>
+    <input type="submit" value="Cadastrar" />
+</form>
